@@ -60,7 +60,8 @@ module.exports = function makeExchange(currency) {
     return result;
 }   
     else if(currency>10000){
-        return "{\nerror: "+'"You are rich, my friend! We don'+"'t have so much coins for exchange\n}";
+        result.error = "You are rich, my friend! We don't have so much coins for exchange";
+        return result;
     }else if(currency<=0){
         return result;
     }
